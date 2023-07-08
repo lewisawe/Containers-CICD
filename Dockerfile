@@ -1,20 +1,11 @@
-# Base image
-FROM python:3.9-slim-buster
+FROM python:3.8-slim-buster
 
-# Set working directory
-WORKDIR /app
+WORKDIR /python-docker
 
-# Copy the requirements file
-COPY requirements.txt .
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+ENV FLASK_APP=hello.py
 
-# Copy the application code
-COPY hello.py .
-
-# Expose the port
-EXPOSE 5000
-
-# Set the entrypoint command
-CMD [ "python", "hello.py" ]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
