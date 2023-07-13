@@ -23,6 +23,13 @@ docker run -p 5000:5000 helloapp
 
 ```
 
-```
+## Github Workflow
+Set up the Github CI Workflow
 
-```
+* Have an account with a container registry, I used dockerhub
+* From your docker registry copy and save in the github repository secrets the 
+  * docker registry username
+  * docker registry token
+* create a folder at the root of the repository '.github/workflows' 
+* Create a yaml file to store the configuration files
+* the files are meant to push our docker image to a repository when a push is made to the main branch and also at a schedule of every saturday at 19:00 hrs
