@@ -2,9 +2,9 @@
 
 ## Prerequisits
 Ensure the following are installed
-1. Python3 
-2. Flask
-3. Docker
+1. Python3 - https://www.python.org/downloads/
+2. Flask - https://flask.palletsprojects.com/en/2.3.x/installation/
+3. Docker - https://docs.docker.com/get-started/
 
 
 hello.py is a simple flask application 
